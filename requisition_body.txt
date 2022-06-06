@@ -1,0 +1,14 @@
+['data']['number'] = Número da issue;
+ ~//~   ['user']['login'] = Usuário que criou a issue;
+ 	['state'] = Estado no qual a issue se encontra;
+ 	['labels']['name'] = Labels referentes daquela issue; (Array de objetos)
+ 	['assignee']['login'] = Quem criou a issue;
+ 	['assignees']['login'] = Pessoal designado para a issue; (Array de objetos)
+ 	['milestone'] = Informações da milestone ao qual a issue está vinculada e dentro
+ 	tem a informação de quem criou a milestone;
+ 	['comments'] = Comentários que a issue possui;
+ 	['created_at'] = Date de criação da issue;
+ 	['updated_at'] = 
+ 	['closed_at] = Date de fechamento da issue;
+ 	['assignee_data'] = Mais detalhes da pessoa que criou a issue, como por exemplo a foto;
+ 	['assignees_data'] = Mais detalhes do pessoal que issue foi designada, como por exemplo a foto;
