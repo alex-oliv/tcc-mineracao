@@ -5,23 +5,33 @@ from grimoirelab_perceval.perceval.backends.core.git import Git
 
 info = {}
 lines = []
-# 
-# python3 main.py -r ES2-UFPI/maltese -t 
+#
+# python3 main.py -r ES2-UFPI/maltese -t
 
 
 def get_commits(owner, repo):
     commits = 0
+    count = 0
+    lines = []
 
     repo_url = f'http://github.com/{owner}/{repo}.git'
     repo_dir = f'/tmp/{repo}.git'
     repo = Git(uri=repo_url, gitpath=repo_dir)
 
     for commit in repo.fetch():
-        line = f"Commit: {commit['data']['commit'][0:7]} || \
-            Author: {commit['data']['Author'].split('<')[0]} || \
-            Files Changed: {len(commit['data']['files'])}\n"
-        # lines.append(line)
+        # line = f"Commit: {commit['data']['commit'][0:7]} || \
+        #     Author: {commit['data']['Author'].split('<')[0]} || \
+        #     Files Changed: {len(commit['data']['files'])}\n"
         commits += 1
+        count += 1
+        if count == 5:
+            break
+        lines.append(f"{commit}\n")
+
+    with open('result-git.json', 'w+') as writer:
+        writer.writelines(lines)
+        writer.close()
+
     return commits
 
 
@@ -66,34 +76,23 @@ args = parser.parse_args()
 
 (owner, repo) = args.repo.split('/')
 commits = get_commits(owner, repo)
-print(args.token)
-count = 0
 repo = GitHub(owner=owner, repository=repo, api_token=args.token)
 
 dates_created = []
 dates_closed = []
 aux = []
+count = 0
 
 for item in repo.fetch():
     if 'pull_request' in item['data']:
         pulls += 1
     else:
-        #info['number'] = item['data']['number']
-        # print("Number: ",info['number'])
-        #info['creator'] = item['data']['user']['login']
-        #info['state'] = item['data']['state']
-        #info['labels'] = parse_arrays(item['data']['labels'], 'name')
-        #info['assignees'] = len(parse_arrays(
-            #item['data']['assignees'], 'login'))
-        #info['comments'] = item['data']['comments']
         info['created_at'] = item['data']['created_at']
         date = info['created_at'].split('T')[0].replace('-', '')
         dates_created.append(date)
         info['closed_at'] = item['data']['closed_at']
         date = info['closed_at'].split('T')[0].replace('-', '')
         dates_closed.append(date)
-        #result = json.dumps(info, indent=4)
-        # lines.append(f"{result},")
 
         labels = parse_arrays(item['data']['labels'], 'name')
         assignees = len(parse_arrays(
@@ -111,18 +110,18 @@ for item in repo.fetch():
         issues += 1
 
     count += 1
-    if count == 3:
+    if count == 10:
         break
+    lines.append(f"{item}\n")
 
 result = {}
 result['issues'] = aux
-lines.append(json.dumps(result))
+# lines.append(json.dumps(result))
 
 print(
     f"Repository > Commits: {commits} || Issues: {issues} || Pull Requests: {pulls}")
 
-with open('result.json', 'w+') as writer:
-    # json.dump(lines, writer)
+with open('result-github.json', 'w+') as writer:
     writer.writelines(lines)
     writer.close()
 
