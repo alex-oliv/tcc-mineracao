@@ -53,14 +53,12 @@ def remove_duplicates(arr):
     return result
 
 
-def parse_dates(dates):
-    count = {}
-
+def parse_dates(count, dates, issue_type):
     non_repeated_dates = remove_duplicates(dates)
     non_repeated_dates.sort()
 
     for i in non_repeated_dates:
-        count[str(i)] = dates.count(i)
+        count[str(i)] = {"total": dates.count(i), "type": issue_type}
 
     return count
 
@@ -75,7 +73,7 @@ parser.add_argument("-r", "--repo", help="GitHub repository, as 'owner/repo'")
 args = parser.parse_args()
 
 (owner, repo) = args.repo.split('/')
-commits = get_commits(owner, repo)
+# commits = get_commits(owner, repo)
 repo = GitHub(owner=owner, repository=repo, api_token=args.token)
 
 dates_created = []
@@ -117,9 +115,9 @@ for item in repo.fetch():
 result = {}
 result['issues'] = aux
 # lines.append(json.dumps(result))
-
+dadad = 1
 print(
-    f"Repository > Commits: {commits} || Issues: {issues} || Pull Requests: {pulls}")
+    f"Repository > Commits: {dadad} || Issues: {issues} || Pull Requests: {pulls}")
 
 with open('result-github.json', 'w+') as writer:
     writer.writelines(lines)
