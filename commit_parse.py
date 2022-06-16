@@ -734,8 +734,7 @@ data = {
 info = []
 
 for commit in data["commits"]:
-    info.append({'author': commit['Author'].split('<')[
-                0], 'files_changed': len(commit['files'])})
+    
 
 
 

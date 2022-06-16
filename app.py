@@ -1,4 +1,4 @@
-import argparse
+from datetime import datetime
 import json
 from flask import Flask
 from grimoirelab_perceval.perceval.backends.core.github import GitHub
@@ -15,7 +15,7 @@ def show_home():
 
 @app.route('/info/<owner>/<repo>')
 def show(owner, repo):
-    result = built_json(owner, repo)
+    result = get_issues(owner, repo)
     return result
 
 
@@ -31,36 +31,13 @@ def show_issues_authors(owner, repo):
     return result
 
 
-info = {}
-lines = []
-#
-# python3 main.py -r ES2-UFPI/maltese -t
+@app.route('/info/commits/<owner>/<repo>')
+def show_total_commits(owner, repo):
+    result = get_commits(owner, repo)
+    return result
 
 
-def get_commits(owner, repo):
-    commits = 0
-    count = 0
-    lines = []
-
-    repo_url = f'http://github.com/{owner}/{repo}.git'
-    repo_dir = f'/tmp/{repo}.git'
-    repo = Git(uri=repo_url, gitpath=repo_dir)
-
-    for commit in repo.fetch():
-        # line = f"Commit: {commit['data']['commit'][0:7]} || \
-        #     Author: {commit['data']['Author'].split('<')[0]} || \
-        #     Files Changed: {len(commit['data']['files'])}\n"
-        commits += 1
-        count += 1
-        if count == 5:
-            break
-        lines.append(f"{commit}\n")
-
-    with open('result-git.json', 'w+') as writer:
-        writer.writelines(lines)
-        writer.close()
-
-    return commits
+###############################
 
 
 def parse_arrays(arr, key):
@@ -88,29 +65,52 @@ def parse_dates(count, dates, issue_type):
     for i in non_repeated_dates:
         count[str(i)] = {"total": dates.count(i), "type": issue_type}
 
-    return count
+
+def formatCommitDate(date):
+    clear_date = datetime.strptime(date, '%c %z')
+
+    return str(clear_date).split(' ')[0].replace('-', '')
 
 
-def built_json(owner, repo):
+def get_commits(owner, repo):
+    aux = []
+    date_commits = []
+
+    repo_url = f'http://github.com/{owner}/{repo}.git'
+    repo_dir = f'/tmp/{repo}.git'
+    repo = Git(uri=repo_url, gitpath=repo_dir)
+
+    for commit in repo.fetch():
+        date = formatCommitDate(commit['data']['CommitDate'])
+        date_commits.append(date)
+
+        author = commit['data']['Author'].split(' <')[0]
+
+        info = {date: {'author': author,
+                       'files_changed': len(commit['data']['files'])
+                    }
+                }
+        aux.append(info)
+
+    
+    result = {}
+    result['commits'] = aux
+    lines = []
+    lines.append(json.dumps(result))
+    
+    with open('result3.json', 'w+') as writer:
+        writer.writelines(lines)
+        writer.close()
+        return json.dumps(result)
+
+
+def get_issues(owner, repo):
     issues = 0
     pulls = 0
-    # parser = argparse.ArgumentParser(
-    #     description="Simple parser for GitHub issues and pull requests"
-    # )
-    # parser.add_argument("-t", "--token", '--nargs',
-    #                     nargs='+', help="GitHub token")
-    # parser.add_argument(
-    #     "-r", "--repo", help="GitHub repository, as 'owner/repo'")
-    # args = parser.parse_args()
+    aux = []
 
-    # (owner, repo) = args.repo.split('/')
-    # commits = get_commits(owner, repo)
     token = ['']
     repo = GitHub(owner=owner, repository=repo, api_token=token)
-
-    aux = []
-    count = 0
-
     for item in repo.fetch():
         if 'pull_request' in item['data']:
             pulls += 1
@@ -130,30 +130,13 @@ def built_json(owner, repo):
                         })
             issues += 1
 
-        # count += 1
-        # if count == 5:
-        #     break
-        # lines.append(f"{item}\n")
-
     result = {}
     result['issues'] = aux
-    # lines.append(json.dumps(result))
-    # print(
-    #     f"Repository > Commits: {dadad} || Issues: {issues} || Pull Requests: {pulls}")
-
-    # with open('result.json', 'w+') as writer:
-    #     writer.writelines(lines)
-    #     writer.close()
-
-    # created_dates = parse_dates(dates_created)
-    # closed_dates = parse_dates(dates_closed)
     return json.dumps(result)
-    # print(created_dates)
-    # print(closed_dates)
 
 
 def issues_dates(owner, repo):
-    data = json.loads(built_json(owner, repo))
+    data = json.loads(get_issues(owner, repo))
     dates_created = []
     dates_closed = []
     count = {}
@@ -163,17 +146,17 @@ def issues_dates(owner, repo):
                              0].replace('-', ''))
         dates_closed.append(issue['closed_at'].split('T')[0].replace('-', ''))
 
-    # print(dates_created)
-    # print(dates_closed)
+    print(dates_created)
+    print(dates_closed)
 
-    count = parse_dates(count, dates_created, "created")
-    count = parse_dates(count, dates_closed, "closed")
+    parse_dates(count, dates_created, "created")
+    parse_dates(count, dates_closed, "closed")
 
     return count
 
 
 def issues_authors(owner, repo):
-    data = json.loads(built_json(owner, repo))
+    data = json.loads(get_issues(owner, repo))
     creators = []
     count = {}
 
