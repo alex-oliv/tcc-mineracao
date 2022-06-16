@@ -41,3 +41,19 @@ print(count)
 count = parse_dates(count, dates_closed, "closed")
 print(count)
 
+"""
+function formatDate(date) {
+  let d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+
+  return [year, month, day].join('-');
+}
+"""
+
+commitDate = "Fri Jan 17 08:22:35 2020 -0300"
+

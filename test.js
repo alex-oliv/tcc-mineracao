@@ -1,15 +1,20 @@
-const str = 'GuilhermeAvelino<gavelino@gmail.com>';
+function formatDate(date) {
+  let d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
 
-const onlyUpper1 = str.replace(/[a-z]/, '');
-//console.log(onlyUpper1); // 👉️ "HW"
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
 
-const onlyUpper2 = str.replace(/([A-Z])/g, ' $1').trim().split("<");
-//console.log(onlyUpper2[0]); // 👉️ "HW"
+  return [year, month, day].join('');
+}
 
-const onlyUpper3 = str.match(/([A-Z])/g, ' $1');
-//console.log(onlyUpper3); // 👉️ ['H', 'W']
+//let today = Date()
+let today = "Fri Jan 17 08:22:35 2020 -0300"
+
+console.log(formatDate(today))
 
 
-// HERE 
-const author = str.replace(/([A-Z])/g, ' $1').trim().split("<")[0];
-console.log(author)
+//commitDate = "Fri Jan 17 08:22:35 2020 -0300"
+//result = "Thu Jun 16 2022 07:43:41 GMT-0300 (GMT-03:00)"

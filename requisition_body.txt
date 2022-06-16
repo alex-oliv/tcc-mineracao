@@ -12,3 +12,20 @@
  	['closed_at] = Date de fechamento da issue;
  	['assignee_data'] = Mais detalhes da pessoa que criou a issue, como por exemplo a foto;
  	['assignees_data'] = Mais detalhes do pessoal que issue foi designada, como por exemplo a foto;
+
+['data']['commit'] = Hash do commit;
+	['parents'] = Hash do commit anterior;
+	['Author'] = Nome de quem fez o commit, junto de seu email entre <>;
+	['CommitDate'] = Data do commit;
+	['message'] = Mensagem daquele commit;
+	['files'] = Arrays de objetos com as info dos arquivos que foram modificados
+
+
+python -m venv env
+
+.\env\Scripts\activate
+
+. env/bin/activate
+      deactivate
+
+pip freeze > requirements.txt

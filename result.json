@@ -1,54 +1,22 @@
 {
-  "issues": [
-    {
-      "number": 1,
-      "creator": "jpedrodsp",
-      "state": "closed",
-      "labels": ["documentation", "help wanted", "urgent"],
-      "assignees": 4,
-      "comments": 0,
-      "created_at": "2020-11-23T18:52:05Z",
-      "closed_at": "2020-12-03T23:53:07Z"
-    },
-    {
-      "number": 2,
-      "creator": "jpedrodsp",
-      "state": "closed",
-      "labels": ["documentation", "help wanted", "urgent"],
-      "assignees": 4,
-      "comments": 0,
-      "created_at": "2020-11-23T18:52:48Z",
-      "closed_at": "2020-12-03T23:53:07Z"
-    },
-    {
-      "number": 3,
-      "creator": "jpedrodsp",
-      "state": "closed",
-      "labels": ["documentation", "help wanted", "urgent"],
-      "assignees": 4,
-      "comments": 0,
-      "created_at": "2020-11-23T18:53:16Z",
-      "closed_at": "2020-12-03T23:53:08Z"
-    },
-    {
-      "number": 4,
-      "creator": "jpedrodsp",
-      "state": "closed",
-      "labels": ["documentation", "help wanted", "urgent"],
-      "assignees": 4,
-      "comments": 0,
-      "created_at": "2020-11-23T18:53:35Z",
-      "closed_at": "2020-12-03T23:53:08Z"
-    },
-    {
-      "number": 5,
-      "creator": "jpedrodsp",
-      "state": "closed",
-      "labels": ["documentation", "help wanted", "urgent"],
-      "assignees": 4,
-      "comments": 0,
-      "created_at": "2020-11-23T18:56:03Z",
-      "closed_at": "2020-12-03T23:53:08Z"
-    }
-  ]
+  "data": {
+    "commit": "6f816f919771a8c0ed084d315ee77e9b43d12b00",
+    "parents": [],
+    "refs": [],
+    "Author": "Guilherme Avelino <gavelino@gmail.com>",
+    "AuthorDate": "Fri Jan 17 08:22:35 2020 -0300",
+    "Commit": "GitHub <noreply@github.com>",
+    "CommitDate": "Fri Jan 17 08:22:35 2020 -0300",
+    "message": "Initial commit",
+    "files": [
+      {
+        "modes": ["000000", "100644"],
+        "indexes": ["0000000", "fe5ce64"],
+        "action": "A",
+        "file": "README.md",
+        "added": "2",
+        "removed": "0"
+      }
+    ]
+  }
 }
