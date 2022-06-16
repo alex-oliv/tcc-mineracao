@@ -1,0 +1,62 @@
+{
+  "dates": {
+    "20201123": [{ "total": 6, "type": "created" }],
+    "20201207": [{ "total": 5, "type": "created" }],
+    "20201209": [{ "total": 7, "type": "created" }],
+    "20201215": [
+      { "total": 3, "type": "created" },
+      { "total": 7, "type": "closed" }
+    ],
+    "20201216": [
+      { "total": 7, "type": "created" },
+      { "total": 4, "type": "closed" }
+    ],
+    "20201217": [
+      { "total": 1, "type": "created" },
+      { "total": 2, "type": "closed" }
+    ],
+    "20201221": [
+      { "total": 1, "type": "created" },
+      { "total": 2, "type": "closed" }
+    ],
+    "20201223": [
+      { "total": 3, "type": "created" },
+      { "total": 2, "type": "closed" }
+    ],
+    "20210111": [{ "total": 19, "type": "created" }],
+    "20210114": [
+      { "total": 1, "type": "created" },
+      { "total": 2, "type": "closed" }
+    ],
+    "20210118": [{ "total": 2, "type": "created" }],
+    "20210120": [
+      { "total": 1, "type": "created" },
+      { "total": 8, "type": "closed" }
+    ],
+    "20210122": [
+      { "total": 9, "type": "created" },
+      { "total": 6, "type": "closed" }
+    ],
+    "20210125": [
+      { "total": 1, "type": "created" },
+      { "total": 3, "type": "closed" }
+    ],
+    "20210127": [
+      { "total": 1, "type": "created" },
+      { "total": 3, "type": "closed" }
+    ],
+    "20210201": [
+      { "total": 1, "type": "created" },
+      { "total": 10, "type": "closed" }
+    ],
+    "20201203": [{ "total": 6, "type": "closed" }],
+    "20201210": [{ "total": 1, "type": "closed" }],
+    "20201213": [{ "total": 2, "type": "closed" }],
+    "20201220": [{ "total": 2, "type": "closed" }],
+    "20210113": [{ "total": 3, "type": "closed" }],
+    "20210117": [{ "total": 1, "type": "closed" }],
+    "20210119": [{ "total": 1, "type": "closed" }],
+    "20210129": [{ "total": 2, "type": "closed" }],
+    "20210131": [{ "total": 1, "type": "closed" }]
+  }
+}

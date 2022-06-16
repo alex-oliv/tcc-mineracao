@@ -1,0 +1,447 @@
+{
+  "commits": [
+    { "20210407": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210516": { "author": "Diego Winter ", "files_changed": 3 } },
+    { "20210516": { "author": "Diego Winter ", "files_changed": 69 } },
+    { "20210516": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210516": { "author": "Diego Winter ", "files_changed": 4 } },
+    { "20210516": { "author": "Leandro Oliveira ", "files_changed": 74 } },
+    { "20210519": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210519": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 4 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 3 } },
+    { "20210521": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210522": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 15
+      }
+    },
+    { "20210517": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210517": { "author": "Diego Winter ", "files_changed": 6 } },
+    { "20210518": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210518": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210518": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210518": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210518": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210518": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210518": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210519": { "author": "Diego Winter ", "files_changed": 2 } },
+    {
+      "20210522": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 10
+      }
+    },
+    { "20210523": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210523": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210523": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210523": { "author": "Diego Winter ", "files_changed": 5 } },
+    {
+      "20210523": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 3
+      }
+    },
+    {
+      "20210523": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210523": { "author": "Diego Winter ", "files_changed": 3 } },
+    { "20210526": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210526": { "author": "Hernandes Erick ", "files_changed": 3 } },
+    { "20210526": { "author": "Hernandes Erick ", "files_changed": 3 } },
+    { "20210526": { "author": "Hernandes Erick ", "files_changed": 6 } },
+    {
+      "20210527": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 14
+      }
+    },
+    {
+      "20210527": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210527": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210527": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210527": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 2
+      }
+    },
+    {
+      "20210527": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210527": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 5
+      }
+    },
+    { "20210527": { "author": "Leandro Oliveira ", "files_changed": 11 } },
+    { "20210527": { "author": "Leandro ", "files_changed": 1 } },
+    { "20210527": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210527": { "author": "Leandro ", "files_changed": 1 } },
+    { "20210527": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210528": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210528": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210528": { "author": "Diego Winter ", "files_changed": 3 } },
+    { "20210528": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210529": { "author": "Hernandes Erick ", "files_changed": 7 } },
+    { "20210528": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210528": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210530": { "author": "Leandro Oliveira ", "files_changed": 2 } },
+    { "20210613": { "author": "Diego Winter ", "files_changed": 5 } },
+    { "20210613": { "author": "Diego Winter ", "files_changed": 6 } },
+    { "20210613": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210613": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210613": { "author": "Diego Winter ", "files_changed": 11 } },
+    { "20210617": { "author": "Diego Winter ", "files_changed": 3 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210618": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 3
+      }
+    },
+    { "20210614": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210614": { "author": "Diego Winter ", "files_changed": 6 } },
+    { "20210615": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210615": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210616": { "author": "Diego Winter ", "files_changed": 3 } },
+    {
+      "20210618": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 13
+      }
+    },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 5 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210618": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210618": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 9
+      }
+    },
+    { "20210620": { "author": "Leandro ", "files_changed": 1 } },
+    { "20210620": { "author": "Leandro ", "files_changed": 1 } },
+    { "20210620": { "author": "Diego Winter ", "files_changed": 2 } },
+    {
+      "20210620": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210620": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 3
+      }
+    },
+    { "20210620": { "author": "Hernandes Erick ", "files_changed": 4 } },
+    { "20210620": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210620": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210620": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210620": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210620": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210621": { "author": "Leandro Oliveira ", "files_changed": 2 } },
+    { "20210621": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210530": { "author": "Hernandes Erick ", "files_changed": 108 } },
+    { "20210623": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210623": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210623": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210623": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210623": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210623": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210623": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210623": { "author": "Diego Winter ", "files_changed": 8 } },
+    {
+      "20210621": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210621": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210624": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210624": { "author": "Diego Winter ", "files_changed": 2 } },
+    {
+      "20210624": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210624": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 7
+      }
+    },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210626": { "author": "Diego Winter ", "files_changed": 11 } },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 5
+      }
+    },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210626": { "author": "Diego Winter ", "files_changed": 4 } },
+    { "20210626": { "author": "Diego Winter ", "files_changed": 3 } },
+    { "20210626": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210626": { "author": "Diego Winter ", "files_changed": 5 } },
+    {
+      "20210626": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 9
+      }
+    },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Leandro ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Leandro ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210627": { "author": "Hernandes Erick ", "files_changed": 13 } },
+    { "20210627": { "author": "Diego Winter ", "files_changed": 41 } },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 2 } },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 3
+      }
+    },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 5 } },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 2
+      }
+    },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210705": { "author": "Diego Winter ", "files_changed": 1 } },
+    {
+      "20210705": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 2
+      }
+    },
+    { "20210706": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210706": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210706": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210707": { "author": "Hernandes Erick ", "files_changed": 3 } },
+    { "20210706": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210706": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210706": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210709": { "author": "Leandro Oliveira ", "files_changed": 5 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 2 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210709": { "author": "Leandro Oliveira ", "files_changed": 2 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210707": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210709": { "author": "Leandro Oliveira ", "files_changed": 2 } },
+    {
+      "20210709": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210709": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    {
+      "20210709": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 1
+      }
+    },
+    { "20210709": { "author": "Diego Winter ", "files_changed": 3 } },
+    { "20210711": { "author": "Leandro Oliveira ", "files_changed": 1 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210711": { "author": "Leandro Oliveira ", "files_changed": 2 } },
+    { "20210711": { "author": "Leandro Oliveira ", "files_changed": 1 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 3 } },
+    { "20210711": { "author": "Leandro Oliveira ", "files_changed": 1 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 2 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    { "20210711": { "author": "Hernandes Erick ", "files_changed": 1 } },
+    {
+      "20210711": {
+        "author": "Maria Theresa de Sousa Ferreira ",
+        "files_changed": 8
+      }
+    },
+    { "20210714": { "author": "Maria Theresa ", "files_changed": 4 } },
+    { "20210714": { "author": "Maria Theresa ", "files_changed": 2 } },
+    { "20210715": { "author": "Maria Theresa ", "files_changed": 2 } },
+    { "20210715": { "author": "Maria Theresa ", "files_changed": 2 } },
+    { "20210716": { "author": "Maria Theresa ", "files_changed": 4 } },
+    { "20210716": { "author": "Maria Theresa ", "files_changed": 5 } },
+    { "20210716": { "author": "Maria Theresa ", "files_changed": 4 } },
+    { "20210716": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210716": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210716": { "author": "Diego Winter ", "files_changed": 1 } },
+    { "20210716": { "author": "Leandro Oliveira ", "files_changed": 18 } },
+    { "20210716": { "author": "Diego Winter ", "files_changed": 36 } },
+    { "20210716": { "author": "Diego Winter ", "files_changed": 1 } }
+  ]
+}
