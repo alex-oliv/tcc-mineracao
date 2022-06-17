@@ -27,8 +27,6 @@ def parse_dates_same_day(count, dates, issue_type):
                 "total": dates.count(i), "type": issue_type}]
         else:
             count[str(i)] = [{"total": dates.count(i), "type": issue_type}]
-        
-        
 
 
 dates_created = []
@@ -45,43 +43,6 @@ parse_dates_same_day(count, dates_closed, 'closed')
 
 dates = {}
 dates['dates'] = count
-
-"""dates = {
-  "dates": [
-    {
-      "20201123": [
-        {
-          "total": 6,
-          "type": "created"
-        }
-      ]
-    },
-    {
-      "20201207": [
-        {
-          "total": 5,
-          "type": "created"
-        }
-      ]
-    },
-    {
-      "20201209": [
-        {
-          "total": 7,
-          "type": "created"
-        }
-      ]
-    },
-    {
-      "20201215": [
-        { "total": 3, "type": "created" },
-        { "total": 7, "type": "closed" }
-      ]
-    }
-  ]
-}
-"""
-
 
 lines = []
 lines.append(json.dumps(dates))

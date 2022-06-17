@@ -7,54 +7,45 @@ data = json.load(f)
 f.close()
 
 
-def remove_duplicates(arr):
-    result = []
-    for i in arr:
-        if i not in result:
-            result.append(i)
-
-    return result
-
-
-def parse_dates(count, dates):
-    non_repeated_dates = remove_duplicates(dates)
-    non_repeated_dates.sort()
-
-    for i in non_repeated_dates:
-        count[str(i)] = {"total": dates.count(i)}
+dates = [
+    {"20210407": {"author": "Diego Winter", "files_changed": 1}},
+    {"20210516": {"author": "Diego Winter", "files_changed": 2}},
+    {"20210516": {"author": "Diego Winter", "files_changed": 7}},
+    {"20210516": {"author": "Leandro Oliveira", "files_changed": 15}},
+    {"20210517": {"author": "Diego Winter", "files_changed": 10}},
+    {"20210518": {"author": "Leandro Oliveira", "files_changed": 15}},
+    {"20210519": {"author": "Leandro Oliveira", "files_changed": 15}},
+]
 
 
-total = 0
-commit_dates = []
-for i in data['commits']:
-    for key in i:
-        commit_dates.append(key)
+# Função que captura o total de arquivos modificados de um usuario durante x periodo
+
+def count_files_changed(date, key, count):
+    if not count.__contains__(date[key]['author']):
+        count.update({date[key]['author']: date[key]['files_changed']})
+    else:
+        files = count.get(date[key]['author'])
+        total_files = date[key]['files_changed'] + files
+        count.update({date[key]['author']: total_files})
 
 
-print(f'Total de commits: {total}')
-print(len(data['commits']))
+def total_files_changed(dates, authors_files, begin=None, final=None):
+    for date in dates:
+        for key in date:
+            if(begin == None and final == None):
+                count_files_changed(date, key, authors_files)
+            elif(begin and final == None):
+                if key >= begin:
+                    count_files_changed(date, key, authors_files)
+            elif(begin == None and final):
+                if key <= final:
+                    count_files_changed(date, key, authors_files)
+            else:
+                if key >= begin and key <= final:
+                    count_files_changed(date, key, authors_files)
 
 
-count = {}
-parse_dates(count, commit_dates)
-
-print(count)
-
-# {
-#       "20201207": {
-#         "author": "Jo\u00e3o Pedro Patrocinio ",
-#         "files_changed": 1
-#       }
-#     },
-#     {
-#       "20201207": {
-#         "author": "Jo\u00e3o Pedro Patrocinio ",
-#         "files_changed": 1
-#       }
-#     },
-#     {
-#       "20201207": {
-#         "author": "Jo\u00e3o Pedro Patrocinio ",
-#         "files_changed": 1
-#       }
-#     },
+# print(len(data['commits']))
+commit_dates = {}
+total_files_changed(data['commits'], commit_dates)
+print(commit_dates)

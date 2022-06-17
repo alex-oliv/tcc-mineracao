@@ -1,6 +1,6 @@
 from datetime import datetime
 import json
-from flask import Flask
+from flask import Flask, request
 from grimoirelab_perceval.perceval.backends.core.github import GitHub
 from grimoirelab_perceval.perceval.backends.core.git import Git
 
@@ -21,7 +21,10 @@ def show(owner, repo):
 
 @app.route('/info/issues-dates/<owner>/<repo>')
 def show_issues(owner, repo):
-    result = issues_dates(owner, repo)
+    start = request.args.get('start')
+    end = request.args.get('end')
+
+    result = issues_dates(owner, repo, start, end)
     return result
 
 
@@ -34,6 +37,15 @@ def show_issues_authors(owner, repo):
 @app.route('/info/commits/<owner>/<repo>')
 def show_total_commits(owner, repo):
     result = get_commits(owner, repo)
+    return result
+    
+
+@app.route('/info/files-changed/<owner>/<repo>')
+def show_total_files_changed(owner, repo):
+    start = request.args.get('start')
+    end = request.args.get('end')
+    
+    result = get_total_changes_by_time(owner, repo, start, end)
     return result
 
 
@@ -58,12 +70,25 @@ def remove_duplicates(arr):
     return result
 
 
-def parse_dates(count, dates, issue_type):
+""" def parse_dates(count, dates, issue_type):
     non_repeated_dates = remove_duplicates(dates)
     non_repeated_dates.sort()
 
     for i in non_repeated_dates:
-        count[str(i)] = {"total": dates.count(i), "type": issue_type}
+        count[str(i)] = {"total": dates.count(i), "type": issue_type} """
+
+
+def parse_dates_same_day(count, dates, issue_type):
+    non_repeated_dates = remove_duplicates(dates)
+    non_repeated_dates.sort()
+
+    for i in non_repeated_dates:
+        if str(i) in count:
+            previous_info = count[str(i)]
+            count[str(i)] = [previous_info[0], {
+                "total": dates.count(i), "type": issue_type}]
+        else:
+            count[str(i)] = [{"total": dates.count(i), "type": issue_type}]
 
 
 def formatCommitDate(date):
@@ -86,22 +111,52 @@ def get_commits(owner, repo):
 
         author = commit['data']['Author'].split(' <')[0]
 
-        info = {date: {'author': author,
-                       'files_changed': len(commit['data']['files'])
-                    }
-                }
+        info = {
+            date: {
+                'author': author,
+                'files_changed': len(commit['data']['files'])
+            }
+        }
         aux.append(info)
 
-    
     result = {}
     result['commits'] = aux
-    lines = []
-    lines.append(json.dumps(result))
-    
-    with open('result3.json', 'w+') as writer:
-        writer.writelines(lines)
-        writer.close()
-        return json.dumps(result)
+
+    return json.dumps(result)
+
+
+def count_files_changed(date, key, count):
+    if not count.__contains__(date[key]['author']):
+        count.update({date[key]['author']: date[key]['files_changed']})
+    else:
+        files = count.get(date[key]['author'])
+        total_files = date[key]['files_changed'] + files
+        count.update({date[key]['author']: total_files})
+
+
+def total_files_changed(dates, authors_files, begin=None, final=None):
+    for date in dates:
+        for key in date:
+            if(begin == None and final == None):
+                count_files_changed(date, key, authors_files)
+            elif(begin and final == None):
+                if key >= begin:
+                    count_files_changed(date, key, authors_files)
+            elif(begin == None and final):
+                if key <= final:
+                    count_files_changed(date, key, authors_files)
+            else:
+                if key >= begin and key <= final:
+                    count_files_changed(date, key, authors_files)
+
+
+def get_total_changes_by_time(owner, repo, begin=None, final=None):
+    data = get_commits(owner, repo)
+
+    authors_files = {}
+    total_files_changed(data['commits'], authors_files, begin, final)
+
+    return authors_files
 
 
 def get_issues(owner, repo):
@@ -135,7 +190,26 @@ def get_issues(owner, repo):
     return json.dumps(result)
 
 
-def issues_dates(owner, repo):
+def filter_issues_by_dates(dates, begin=None, final=None):
+    issues_by_dates = {}
+
+    for key in dates:
+        if(begin == None and final == None):
+            issues_by_dates.update({key: dates[key]})
+        elif(begin and final == None):
+            if key >= begin:
+                issues_by_dates.update({key: dates[key]})
+        elif(begin == None and final):
+            if key <= final:
+                issues_by_dates.update({key: dates[key]})
+        else:
+            if key >= begin and key <= final:
+                issues_by_dates.update({key: dates[key]})
+
+    return issues_by_dates
+
+
+def issues_dates(owner, repo, begin=None, final=None):
     data = json.loads(get_issues(owner, repo))
     dates_created = []
     dates_closed = []
@@ -146,13 +220,12 @@ def issues_dates(owner, repo):
                              0].replace('-', ''))
         dates_closed.append(issue['closed_at'].split('T')[0].replace('-', ''))
 
-    print(dates_created)
-    print(dates_closed)
+    parse_dates_same_day(count, dates_created, "created")
+    parse_dates_same_day(count, dates_closed, "closed")
 
-    parse_dates(count, dates_created, "created")
-    parse_dates(count, dates_closed, "closed")
+    print(count)
 
-    return count
+    return filter_issues_by_dates(count, begin, final)
 
 
 def issues_authors(owner, repo):
